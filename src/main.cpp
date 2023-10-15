@@ -10,7 +10,7 @@ void printParam(Shape *shape){
 }
 
 int main(int, char**){
-    std::cout << "Hello, from 29_2_shapes!\n";
+    std::cout << "Hello, from 29_2_shapes!\n\n";
     
     Circle c(5);
     printParam(&c);

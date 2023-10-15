@@ -28,14 +28,14 @@ std::string Rectangle::type(){ return "Rectangle";}
 
 
 Triangle::Triangle(double _a, double _b, double _c): a(_a), b(_b), c(_c){
-    double p = (a + b + c)/2;
+    p = (a + b + c)/2;
 };
 
-double Triangle::area(){return std::sqrt(p * (p - a) * (p - b) * (p - c));}
+double Triangle::area(){return sqrt(p * (p - a) * (p - b) * (p - c));}
 
 BoundingBoxDimensions Triangle::dimensions() {
     BoundingBoxDimensions bbd;
-    double radious = a * b * c / (4 * std::sqrt(p*(p - a)*(p - b)*(p - c)));
+    double radious = a * b * c / (4 * sqrt(p*(p - a)*(p - b)*(p - c)));
     bbd.width = bbd.height = radious * 2;
     return bbd;
 }
